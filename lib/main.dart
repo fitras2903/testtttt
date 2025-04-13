@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'pages/halaman_counter.dart';
+import 'pages/halaman_api.dart';
 import 'pages/halaman_profil.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  final List<Widget> _pages = [HalamanCounter(), HalamanProfil()];
+  final List<Widget> _pages = [HalamanCounter(), HalamanApi(), HalamanProfil()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -41,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Iconsax.add), label: 'Counter'),
+          BottomNavigationBarItem(icon: Icon(Iconsax.folder), label: 'API'),
           BottomNavigationBarItem(icon: Icon(Iconsax.user), label: 'Profil'),
         ],
         currentIndex: _selectedIndex,
